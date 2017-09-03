@@ -34,6 +34,7 @@ function close (fastify, done) {
   redis.client.disconnect()
   redis.pub.disconnect()
   redis.sub.disconnect()
+  done()
 }
 
 module.exports = fp(fastifyRedis, '>=0.13.1')
